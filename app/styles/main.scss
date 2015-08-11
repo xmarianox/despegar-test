@@ -36,7 +36,7 @@ main {
 
 [class*='col-'] {
   float: left;
-  padding: 1em;
+  //padding: 1em;
   width: 100%;
   min-height: 1px;
 }
@@ -94,13 +94,14 @@ main {
 
 header {
   background-color: $gray-2;
-  @include size(100%, auto);
+  @include size(100%, 64px);
   @include border-radius(8px);
   overflow: hidden;
   padding: 10px;
+  margin-bottom: 20px;
 }
 .results-title {
-  @include font-size(19px);
+  @include font-size(20px);
   color: $blue;
   margin-bottom: 10px;
 }
@@ -108,3 +109,23 @@ header {
   @include font-size(16px);
   color: $light-blue;
 }
+
+// social icons
+@import "icons";
+
+.social-box {
+  @include size(auto, auto);
+  overflow: hidden;
+  float: right;
+  margin: 12px 0;
+
+  li {
+    display: inline-block;
+    vertical-align: middle;
+
+    &:last-child {
+      vertical-align: top;
+    }
+  }
+}
+

@@ -1,0 +1,17 @@
+// _icons
+
+.icon {
+	background: url(../images/sprite-social-box.png) no-repeat;
+	display: inline-block;
+	text-indent: -9999px;
+	@include size(20px, 20px);
+
+	&.icon_facebook {
+		background-position: 0 0;
+	}
+
+	&.icon_twitter {
+		background-position: -20px 0;
+	}
+
+}
