@@ -3,10 +3,10 @@
 1 - Ejercicio de maquetación:
 ![Maqueta de desarrollar](/maqueta.png)
 
-- Maquetar la página adjunta en HTML5 de la forma mas fiel posible.
-- Utilizar css3 cuando sea posible aplicando 'Graceful degradation' en los navegadores que no soporten.
-- Compatibilidad con IE > 8 ,FF > 4 , Safari y Chrome.
-- Se valorará el uso de Sprites CSS para las imágenes.
+- [ ] Maquetar la página adjunta en HTML5 de la forma mas fiel posible.
+- [ ] Utilizar css3 cuando sea posible aplicando 'Graceful degradation' en los navegadores que no soporten.
+- [ ] Compatibilidad con IE > 8 ,FF > 4 , Safari y Chrome.
+- [ ] Se valorará el uso de Sprites CSS para las imágenes.
 
 2 - Ejercicio JavaScript:
 
@@ -17,11 +17,11 @@ Generar la lógica en una clase que maneje esta información obtenida y la repre
 Una vez representada agregar un 'listener' al boton 'ver disponibilidad' haga que le muestre
 al usuario de cualquier forma posible, las fechas de 'availability' de los datos.
 
-- Será requisito que el JSON dado sea cargado asincronicamente.
-- Se valorará generar un diagrama de clases para manilupar los datos.
-- Se pueden usar librerías estilo jQuery / prototype.
-- Se valorará el uso de templates y patron MVC para la representación.
-- No hace falta tomar en cuenta el paginado, ni tampoco que deban mostrarse en el mapa.
+- [ ] Será requisito que el JSON dado sea cargado asincronicamente.
+- [ ] Se valorará generar un diagrama de clases para manilupar los datos.
+- [ ] Se pueden usar librerías estilo jQuery / prototype.
+- [ ] Se valorará el uso de templates y patron MVC para la representación.
+- [ ] No hace falta tomar en cuenta el paginado, ni tampoco que deban mostrarse en el mapa.
 
 ```json
 {
