@@ -1,0 +1,83 @@
+// bower:scss
+// endbower
+@import 'mixins';
+@import 'reset';
+@import 'variables';
+
+
+html {
+  font-size: 62.5%; /* Sets up the Base 10 stuff */
+}
+
+body {
+  background-color: $gray;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.wrapper {
+  @include size(100%,auto);
+  max-width: 992px;
+  background-color: $white;
+  padding: 12px 19px;
+  margin: 45px auto;
+  @include border-radius(8px);
+}
+
+.breadcrumbs {
+  @include size(100%,auto);
+  display: block;
+  margin-bottom: 15px;
+
+  li {
+    display: inline-block;
+    @include font-size(1.3);
+    vertical-align: middle;
+    color: $gray-3;
+
+    // chevron
+    &:before {
+      content: "\203A";
+      display: inline-block;
+      vertical-align: bottom;
+      @include font-size(1.3);
+      margin: 0 8px;
+    }
+
+    // remove chevron
+    &:first-child:before {
+        content: "";
+        margin: 0;
+    }
+  }
+  a {
+    color: $light-blue;
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+header {
+  background-color: $gray-2;
+  @include size(100%,auto);
+  @include border-radius(8px);
+  overflow: hidden;
+  padding: 10px;
+
+}
+.col-9 {
+  @include grid(9, '.col-9');
+}
+
+.results-title {
+  @include font-size(1.9);
+  color: $blue;
+  margin-bottom: 10px;
+}
+.results-subtitle {
+  @include font-size(1.6);
+  color: $light-blue;
+}
+

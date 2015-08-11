@@ -1,0 +1,69 @@
+// mixins
+
+// border-box
+@mixin border-box {
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+}
+// border-radius
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+     -moz-border-radius: $radius;
+      -ms-border-radius: $radius;
+          border-radius: $radius;
+}
+// size
+@mixin size($width, $height) {
+	width: $width;
+	height: $height;
+}
+// Rem font-size
+@mixin font-size($sizeValue: 1.6) {
+  font-size: ($sizeValue * 10) + px;
+  font-size: $sizeValue + rem;
+}
+// grid system
+@mixin grid($columns: 2, $tag: "div") {
+    #{$tag} {
+        width: 100% / $columns;
+        box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        float: left;
+    }
+    &:after {
+        display: table;
+        content: " ";
+        clear: both;
+        *zoom: 1;
+    }
+}
+// img-responsive
+@mixin img-responsive {
+  width: auto;
+  max-width: 100%;
+  height: auto !important;
+}
+// box-shadow
+@mixin box-shadow($angle, $color) {
+	box-shadow: $angle $color;
+}
+// text-shadow
+@mixin text-shadow($angle, $color) {
+	text-shadow: $angle $color;
+}
+// position absolute
+@mixin position($position, $top, $left, $bottom, $right) {
+	position: $position;
+	top: $top;
+	left: $left;
+	bottom: $bottom;
+	right: $right;
+}
+// transition
+@mixin transition($time, $type) {
+  -webkit-transition: $time $type;
+  -moz-transition: $time $type;
+  -o-transition: $time $type;
+  transition: $time $type;
+}
