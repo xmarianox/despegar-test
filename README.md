@@ -1,6 +1,7 @@
 # despegar-test
 
 1 - Ejercicio de maquetación:
+![Maqueta de desarrollar](/maqueta.png)
 
 - Maquetar la página adjunta en HTML5 de la forma mas fiel posible.
 - Utilizar css3 cuando sea posible aplicando 'Graceful degradation' en los navegadores que no soporten.
