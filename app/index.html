@@ -52,56 +52,58 @@
         </div>
       </header>
 
-      <section class="row">
+      <section class="row search-section">
         <article class="col-7">
           <div class="searchbox">
             <h3>Buscar Hoteles en Río de Janeiro, Brasil</h3>
 
             <form>
-              <div class="form_control">
-                <label for="ciudad">Ciudad</label>
-                <input type="text" name="ciudad" id="ciudad">
+              <div class="form-control">
+                <label for="ciudad" class="col-2">Ciudad</label>
+                <input type="text" class="col-8" name="ciudad" id="ciudad" placeHolder="Río de Janeiro, Brasil">
+              </div>
+
+              <div class="form-control">
+                <label for="entrada" class="col-2">Entrada</label>
+                <input type="text" class="col-4" name="entrada" id="entrada">
+              </div>
+
+              <div class="form-control">
+                <label for="salida" class="col-2">Salida</label>
+                <input type="text" class="col-4" name="salida" id="salida">
+              </div>
+
+              <div class="form-control">
+                <label for="cantidad" class="col-2">Cantidad</label>
+                <input type="text" class="col-4" name="cantidad" id="cantidad" placeHolder="1 habitación">
               </div>
 
               <div class="form_control">
-                <label for="entrada">Entrada</label>
-                <input type="text" name="entrada" id="entrada">
-              </div>
+                <span class="col-2">Huéspedes</span>
 
-              <div class="form_control">
-                <label for="salida">Salida</label>
-                <input type="text" name="salida" id="salida">
-              </div>
+                <div class="col-6">
+                  <div class="select-control col-4">
+                    <label for="adultos">Adultos</label>
+                    <select id="adultos" name="adultos">
+                      <option>0</option>
+                      <option>2</option>
+                      <option>3</option>
+                      <option>4</option>
+                    </select>
+                  </div>
 
-              <div class="form_control">
-                <label for="cantidad">Cantidad</label>
-                <input type="text" name="cantidad" id="cantidad" placeHolder="1 habitación">
-              </div>
-
-              <div class="form_control">
-                <span>Huéspedes</span>
-
-                <div>
-                  <label for="adultos">Adultos</label>
-                  <select id="adultos" name="adultos">
-                    <option>0</option>
-                    <option>2</option>
-                    <option>3</option>
-                    <option>4</option>
-                  </select>
+                  <div class="select-control col-4">
+                    <label for="menores">Menores</label>
+                    <select id="menores" name="menores">
+                      <option>0</option>
+                      <option>2</option>
+                      <option>3</option>
+                      <option>4</option>
+                    </select>
+                  </div>
                 </div>
 
-                <div>
-                  <label for="menores">Menores</label>
-                  <select id="menores" name="menores">
-                    <option>0</option>
-                    <option>2</option>
-                    <option>3</option>
-                    <option>4</option>
-                  </select>
-                </div>
-
-                <div>
+                <div class="col-4">
                   <span class="icon icon_mejor_price"></span>
 
                   <button class="btn btn_default">Buscar</button>
@@ -111,8 +113,14 @@
             </form>
           </div>
         </article>
+
         <article class="col-5">
-          llal
+          <div class="box-destacada">
+            <div class="promo-overlay">
+              <h3>110 Hoteles en Río de Janeiro, Brasil</h3>
+              <p>A partir de <span>U$S</span> <em class="price">577</em></p>
+            </div>
+          </div>
         </article>
       </section><!-- Search section -->
 
@@ -252,7 +260,6 @@
             </div>
           </div>
         </div><!-- row -->
-
       </footer>
     </main>
 

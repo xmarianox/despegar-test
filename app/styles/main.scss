@@ -128,12 +128,137 @@ header {
   }
 }
 
+// search sectaion
+.search-section {
+  .col-7 {
+    padding-right: 6px;
+  }
+  .col-5 {
+    padding-left: 6px;
+  }
+}
+
 .searchbox {
+  @include size(100%, auto);
+  min-height: 332px;
   background-color: $yellow;
+  @include border-radius(8px);
+  overflow: hidden;
+  padding: 20px;
+  margin-bottom: 20px;
+
+  //
+  h3 {
+    @include font-size(18px);
+    color: $blue;
+    margin-bottom: 20px;
+  }
+}
+
+form {
+
+  .form-control {
+    @include size(100%, auto);
+    overflow: hidden;
+    margin-bottom: 5px;
+  }
+
+  label {
+    @include font-size(14px);
+    display: inline-block;
+    line-height: 30px;
+  }
+
+  input {
+    @include size(100%, 30px);
+    display: inline-block;
+    overflow: hidden;
+    border: 1px solid $gray-3;
+    padding: 0 7px;
+    background-color: $white;
+
+    // texts
+    @include font-size(14px);
+    line-height: 30px;
+  }
+
+  span {
+    @include font-size(12px);
+    display: inline-block;
+    line-height: 60px;
+  }
+
+  .select-control {
+    label {
+      display: block;
+    }
+  }
+
+  select {
+    @include size(auto, 30px);
+    display: inline-block;
+    overflow: hidden;
+    border: 1px solid $gray-3;
+    @include border-radius(0px);
+    padding: 0 7px;
+    background-color: $white;
+    // texts
+    @include font-size(14px);
+    line-height: 30px;
+  }
+}
+
+// buttons
+@import "buttons";
+
+// promo hoteles
+.box-destacada {
+  @include size(100%, auto);
+  min-height: 332px;
+  background: url(../images/brasil.jpeg) center center no-repeat;
+  background-size: cover;
+  @include border-radius(8px);
+  overflow: hidden;
+  position: relative;
+}
+
+.promo-overlay {
+  @include size(100%, 150px);
+  background-color: $black-70;
+  overflow: hidden;
+  padding: 30px 20px;
+  margin-bottom: 20px;
+  // pos
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 90px;
+  // texts
+  color: $white;
+  text-align: center;
+
+  h3 {
+    @include font-size(20px);
+    margin-bottom: 15px;
+  }
+
+  p {
+    @include font-size(12px);
+
+    span {
+      @include font-size(14px);
+    }
+    .price {
+      @include font-size(20px);
+    }
+  }
 }
 
 // footer
-
+footer {
+  @include size(100%, auto);
+  overflow: hidden;
+}
 .container {
   @include size(100%, auto);
   background-color: $gray-2;
@@ -169,5 +294,4 @@ header {
     color: $light-blue;
     text-decoration: none;
   }
-
 }
