@@ -15,4 +15,10 @@
 		background-position: -20px 0;
 	}
 
+	&.icon_best_price {
+		background: url(../images/best-price-es.svg) 0 0 no-repeat;
+		background-size: cover;
+		@include size(56px, 56px);
+
+	}
 }

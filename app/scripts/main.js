@@ -1,1 +1,12 @@
-console.log('\'Allo \'Allo!');
+/* jshint smarttabs:true */
+/* global $, google */
+// Google Maps
+
+function initMap() {
+	'use strict';
+	var map;
+	map = new google.maps.Map(document.getElementById('map'), {
+		center: {lat: -34.397, lng: 150.644},
+    	zoom: 8
+	});
+}

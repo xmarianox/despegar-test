@@ -4,7 +4,8 @@
 @import 'reset';
 @import 'variables';
 @import 'mixins';
-//@import 'grids';
+@import "icons";
+@import "buttons";
 
 *, *:after, *:before {
   margin: 0;
@@ -110,8 +111,6 @@ header {
 }
 
 // social icons
-@import "icons";
-
 .social-box {
   @include size(auto, auto);
   overflow: hidden;
@@ -206,10 +205,21 @@ form {
     @include font-size(14px);
     line-height: 30px;
   }
-}
 
-// buttons
-@import "buttons";
+  .right {
+    float: right;
+  }
+
+  .icon {
+    display: block;
+    margin: 0 auto 10px;
+  }
+  .btn {
+    display: block;
+    margin: 0 auto;
+  }
+
+}
 
 // promo hoteles
 .box-destacada {
@@ -224,7 +234,7 @@ form {
 
 .promo-overlay {
   @include size(100%, 150px);
-  background-color: $black-70;
+  background-color: $black-50;
   overflow: hidden;
   padding: 30px 20px;
   margin-bottom: 20px;
@@ -252,6 +262,76 @@ form {
       @include font-size(20px);
     }
   }
+}
+
+// results-hoteles
+.results-section {
+  .col-8 {
+    padding-right: 10px;
+  }
+  .col-4 {
+    padding-left: 10px;
+  }
+}
+
+.results-header {
+  @include size(100%, 53px);
+  background-color: $gray-2;
+  @include border-radius(4px);
+  overflow: hidden;
+  padding: 10px;
+  margin-bottom: 10px;
+
+  h3 {
+    @include font-size(20px);
+    line-height: 30px;
+    color: $blue;
+  }
+}
+// listado de resultados
+#results-listView {
+  @include size(100%, auto);
+  overflow: hidden;
+}
+// items
+.results-list-items {
+  @include size(100%, auto);
+  @include border-radius(4px);
+  border: 1px solid $gray-5;
+  overflow: hidden;
+
+  .img-box {
+    padding: 15px;
+    float: left;
+  }
+  .data-box {
+    padding: 15px 0;
+    float: left;
+  }
+
+  img {
+    border: 1px solid $gray-5;
+    display: block;
+  }
+}
+
+
+.map-box {
+  @include size(100%, auto);
+  background-color: $gray-2;
+  overflow: hidden;
+  padding: 12px 10px;
+  margin-bottom: 10px;
+
+  h3 {
+    @include font-size(16px);
+    color: $blue;
+    margin-bottom: 10px;
+  }
+}
+
+#map {
+  @include size(100%, 190px);
 }
 
 // footer

@@ -86,6 +86,7 @@
                     <label for="adultos">Adultos</label>
                     <select id="adultos" name="adultos">
                       <option>0</option>
+                      <option>1</option>
                       <option>2</option>
                       <option>3</option>
                       <option>4</option>
@@ -96,6 +97,7 @@
                     <label for="menores">Menores</label>
                     <select id="menores" name="menores">
                       <option>0</option>
+                      <option>1</option>
                       <option>2</option>
                       <option>3</option>
                       <option>4</option>
@@ -103,8 +105,8 @@
                   </div>
                 </div>
 
-                <div class="col-4">
-                  <span class="icon icon_mejor_price"></span>
+                <div class="right">
+                  <span class="icon icon_best_price"></span>
 
                   <button class="btn btn_default">Buscar</button>
                 </div>
@@ -124,12 +126,45 @@
         </article>
       </section><!-- Search section -->
 
-      <section class="row">
+      <section class="row results-section">
+
         <article class="col-8">
-          lala
+          <div class="results-header">
+            <h3>Listado de Hoteles en Río de Janeiro, Brasil</h3>
+          </div>
+
+          <ul id="results-listView">
+            
+            <li class="results-list-items">
+              <div class="img-box">
+                <img src="images/hotel.jpg" height="95" width="95" alt="hotel">
+              </div><!-- img-box -->
+              <div class="data-box">
+                <div class="col">
+                  <h4>Rio Otto Palace</h4>
+
+                  <ul>
+                    <li class="icon icon-star"></li>
+                    <li class="icon icon-star"></li>
+                    <li class="icon icon-star"></li>
+                    <li class="icon icon-star"></li>
+                    <li class="icon icon-star"></li>
+                  </ul><!-- estrellas -->
+                  <p>Via Cesare Battisti 133</p>
+                  <a href="">Ver mapa</a>
+                </div>
+                <div class="col"></div>
+              </div><!-- data-box -->
+            </li><!-- Template: results-list-items -->
+            
+          </ul>
         </article>
+
         <article class="col-4">
-          llal
+          <div class="map-box">
+            <h3>Mapa</h3>
+            <div id="map"></div>
+          </div>
         </article>
       </section><!-- Results section -->
 
@@ -275,6 +310,10 @@
 
     <!-- G+ button -->
     <script src="https://apis.google.com/js/platform.js" async defer>{lang: 'es'}</script>
+
+    <!-- GoogleMaps API -->
+    <script src="https://maps.googleapis.com/maps/api/js?callback=initMap"
+        async defer></script>
 
     <!-- build:js scripts/vendor.js -->
     <!-- bower:js -->
