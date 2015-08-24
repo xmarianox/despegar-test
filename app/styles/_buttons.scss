@@ -42,4 +42,42 @@
 		    		box-shadow: 0 0.1em 0.1em $black-50, inset 0 0.1em 0 $white-50, inset 0 0 1em $blue-3;
 		}
 	}
+	// f39c9f
+	// red: #ed2d37
+	// dark-red: #660409;
+	&.btn_primary {
+		@include size(auto, 31px);
+		// text
+		@include font-size(12px);
+		line-height: 31px;
+		padding: 0 15px;
+
+		border: 1px solid #660409;
+		background-color: #ed2d37;
+		//gradient
+		background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #ed2d37), color-stop(100%, $black-2));
+	    background-image: -webkit-linear-gradient(#ed2d37, $black-2);
+	    background-image: -moz-linear-gradient(#ed2d37, $black-2);
+	    background-image: -o-linear-gradient(#ed2d37, $black-2);
+	    background-image: linear-gradient(#ed2d37, $black-2);
+		// box-shadow
+    	-webkit-box-shadow: 0 0.1em 0.1em $black-50, inset 0 0.1em 0 $white-50;
+    	   -moz-box-shadow: 0 0.1em 0.1em $black-50, inset 0 0.1em 0 $white-50;
+    			box-shadow: 0 0.1em 0.1em $black-50, inset 0 0.1em 0 $white-50;
+
+		/* &:hover {
+			background-color: $blue-3;
+			// gradient
+		    background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, $white-00), color-stop(100%, $dark-blue));
+		    background-image: -webkit-linear-gradient($white-00, $dark-blue);
+		    background-image: -moz-linear-gradient($white-00, $dark-blue);
+		    background-image: -o-linear-gradient($white-00, $dark-blue);
+		    background-image: linear-gradient($white-00, $dark-blue);
+		    // box-shadow
+		    -webkit-box-shadow: 0 0.1em 0.1em $black-50, inset 0 0.1em 0 $white-50, inset 0 0 1em $blue-3;
+		       -moz-box-shadow: 0 0.1em 0.1em $black-50, inset 0 0.1em 0 $white-50, inset 0 0 1em $blue-3;
+		    		box-shadow: 0 0.1em 0.1em $black-50, inset 0 0.1em 0 $white-50, inset 0 0 1em $blue-3;
+		} */
+
+	}
 }

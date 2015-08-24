@@ -11,6 +11,7 @@
 
     <!-- build:css styles/vendor.css -->
     <!-- bower:css -->
+    <link rel="stylesheet" href="../bower_components/fontawesome/css/font-awesome.min.css" />
     <!-- endbower -->
     <!-- endbuild -->
 
@@ -134,29 +135,42 @@
           </div>
 
           <ul id="results-listView">
-            
+
             <li class="results-list-items">
               <div class="img-box">
                 <img src="images/hotel.jpg" height="95" width="95" alt="hotel">
               </div><!-- img-box -->
+
               <div class="data-box">
                 <div class="col">
                   <h4>Rio Otto Palace</h4>
 
-                  <ul>
-                    <li class="icon icon-star"></li>
-                    <li class="icon icon-star"></li>
-                    <li class="icon icon-star"></li>
-                    <li class="icon icon-star"></li>
-                    <li class="icon icon-star"></li>
+                  <ul class="stars">
+                    <li><i class="fa fa-star"></i></li>
+                    <li><i class="fa fa-star"></i></li>
+                    <li><i class="fa fa-star"></i></li>
+                    <li><i class="fa fa-star"></i></li>
+                    <li><i class="fa fa-star"></i></li>
                   </ul><!-- estrellas -->
                   <p>Via Cesare Battisti 133</p>
                   <a href="">Ver mapa</a>
                 </div>
-                <div class="col"></div>
+
+                <div class="col">
+                  <em><i class="fa fa-comment"></i> Confortable</em>
+                  <span>7 puntos</span>
+                  <a href="#" title="40 comentarios" class="comments">40 comentarios</a>
+                </div>
               </div><!-- data-box -->
+
+              <div class="confirm-box">
+                <small>desde</small>
+                <p><span>U$S</span> <em class="price">215</em></p>
+
+                <button class="btn btn_primary">Ver disponibilidad</button>
+              </div>
             </li><!-- Template: results-list-items -->
-            
+
           </ul>
         </article>
 
