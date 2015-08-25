@@ -21,4 +21,16 @@
 		@include size(56px, 56px);
 
 	}
+
+	&.icon_user_comment {
+		background: url(../images/sprite-comment.jpg) no-repeat;
+		background-position: 0 0;
+		@include size(34px, 28px);
+	}
+
+	&.icon_flag_mex {
+		background: url(../images/sprite-comment.jpg) no-repeat;
+		background-position: -7px -33px;
+		@include size(19px, 14px);
+	}
 }

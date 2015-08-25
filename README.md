@@ -3,10 +3,10 @@
 1 - Ejercicio de maquetación:
 ![Maqueta de desarrollar](/maqueta.png)
 
-- [ ] Maquetar la página adjunta en HTML5 de la forma mas fiel posible.
-- [ ] Utilizar css3 cuando sea posible aplicando 'Graceful degradation' en los navegadores que no soporten.
-- [ ] Compatibilidad con IE > 8 ,FF > 4 , Safari y Chrome.
-- [ ] Se valorará el uso de Sprites CSS para las imágenes.
+- [x] Maquetar la página adjunta en HTML5 de la forma mas fiel posible.
+- [x] Utilizar css3 cuando sea posible aplicando 'Graceful degradation' en los navegadores que no soporten.
+- [x] Compatibilidad con IE > 8 ,FF > 4 , Safari y Chrome.
+- [x] Se valorará el uso de Sprites CSS para las imágenes.
 
 2 - Ejercicio JavaScript:
 

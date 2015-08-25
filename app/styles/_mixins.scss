@@ -21,6 +21,21 @@
 	height: $height;
 }
 
+@mixin place-holder($color) {
+  ::-webkit-input-placeholder {
+     color: $color;
+  }
+  :-moz-placeholder { /* Firefox 18- */
+     color: $color;
+  }
+  ::-moz-placeholder {  /* Firefox 19+ */
+     color: $color;
+  }
+  :-ms-input-placeholder {
+     color: $color;
+  }
+}
+
 // calculate rem helper
 @function calculateRem($size) {
   $remSize: $size / 16px;

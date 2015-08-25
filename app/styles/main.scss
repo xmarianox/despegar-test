@@ -179,7 +179,14 @@ form {
     // texts
     @include font-size(14px);
     line-height: 30px;
+
+    &[type=date] {
+      background: $white url(../images/bg-input-date.jpg) 98% center no-repeat;
+      padding-right: 30px;
+    }
   }
+
+  @include place-holder($gray-5);
 
   span {
     @include font-size(12px);
@@ -299,6 +306,7 @@ form {
   @include border-radius(4px);
   border: 1px solid $gray-5;
   overflow: hidden;
+  margin-bottom: 10px;
 
   .img-box {
     @include size(125px, 100%);
@@ -368,9 +376,8 @@ form {
 
   .confirm-box {
     @include size(152px, auto);
-    padding: 20px 8px;
+    padding: 20px 8px 16px;
     float: right;
-
     /* gradient */
     background: $yellow; /* Old browsers */
     background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2ZmZmYzMyIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNmZmZmZmYiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
@@ -408,11 +415,85 @@ form {
   }
 }
 
+.add-hotel {
+  padding: 10px 0;
+
+  span {
+    @include font-size(13px);
+
+    a {
+      color: $light-blue;
+    }
+  }
+}
+
+.pagination {
+  @include size(100%, auto);
+  text-align: center;
+  margin-top: 40px;
+  margin-bottom: 15px;
+
+  ul {
+    display: inline-block;
+
+    li {
+      height: 27px;
+      text-align: center;
+      float: left;
+      margin-left: 2px;
+      margin-right: 2px;
+
+      &.next {
+        margin-left: 10px;
+
+        a:hover {
+          text-decoration: underline;
+        }
+      }
+
+      a {
+        display: block;
+        line-height: 27px;
+        min-width: 27px;
+        padding: 0 6px;
+      }
+    }
+  }
+
+  li {
+    background: #eee;
+    border: 1px solid #ccc;
+    list-style: none;
+
+    a {
+      color: #319fda;
+      text-decoration: none;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+
+  .active, .dots, .next {
+    pointer-events: none;
+    cursor: default;
+    background: none;
+    border: none;
+  }
+  .active, .dots {
+    a {
+      color: $gray-3;
+    }
+  }
+
+}
+
 .map-box {
   @include size(100%, auto);
   background-color: $gray-2;
   overflow: hidden;
-  padding: 12px 10px;
+  padding: 12px 10px 5px;
   margin-bottom: 10px;
 
   h3 {
@@ -420,10 +501,186 @@ form {
     color: $blue;
     margin-bottom: 10px;
   }
-}
 
+  .zoom {
+    @include font-size(10px);
+    display: inline-block;
+    vertical-align: middle;
+    color: $light-blue;
+    float: right;
+    text-decoration: none;
+    line-height: 18px;
+    margin-top: 5px;
+
+    .fa {
+      @include font-size(14px);
+      vertical-align: middle;
+    }
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
 #map {
   @include size(100%, 190px);
+}
+
+// comentarios
+.comment-box {
+  @include size(100%, auto);
+  overflow: hidden;
+}
+
+.comment-text {
+  @include size(100%, auto);
+  background-color: $light-blue-2;
+  border: 1px solid $light-blue-3;
+  @include border-radius(4px);
+  //overflow: hidden;
+  padding: 10px;
+  margin-bottom: 12px;
+  position: relative;
+
+  &::before {
+    content: "";
+    display: block;
+    position: absolute;
+    bottom: -10px;
+    left: 18px;
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-top: 10px solid $light-blue-3;
+    border-top-color: rgba(98, 182, 226, 0.8);
+    font-size: 0;
+    line-height: 0;
+  }
+  &::after {
+    content: "";
+    display: block;
+    position: absolute;
+    bottom: -9px;
+    left: 19px;
+    width: 0;
+    height: 0;
+    border-left: 9px solid transparent;
+    border-right: 9px solid transparent;
+    border-top: 9px solid $light-blue-2;
+    font-size: 0;
+    line-height: 0;
+  }
+
+  p {
+    @include font-size(12px);
+    line-height: 18px;
+    color: $gray-6;
+  }
+}
+
+.comment-user-data {
+  @include size(100%, auto);
+  padding: 0 15px;
+  overflow: hidden;
+  margin-bottom: 15px;
+
+  .col {
+    float: left;
+
+    &:first-child {
+       @include size(34px, auto);
+       text-align: center;
+    }
+
+    &:last-child {
+      padding-left: 10px;
+    }
+
+    .icon_user_comment {
+      margin-bottom: 5px;
+    }
+  }
+
+  .name {
+    @include font-size(16px);
+    color: $blue;
+    margin-bottom: 5px;
+    display: block;
+  }
+  .description, .date {
+    @include font-size(12px);
+    color: $gray-3;
+    margin-bottom: 5px;
+    display: block;
+  }
+}
+
+// stars content
+.starts-hotel-box {
+  @include size(100%, auto);
+  @include border-radius(4px);
+  background-color: $gray-2;
+  padding: 14px;
+  overflow: hidden;
+  margin-bottom: 10px;
+}
+.content-item-hotel {
+  @include size(100%, auto);
+  overflow: hidden;
+  line-height: 30px;
+
+  a {
+    @include font-size(14px);
+    color: $light-blue;
+    text-decoration: none;
+  }
+
+  ul {
+    display: inline-block;
+    float: right;
+  }
+
+  li {
+    display: inline-block;
+    color: $yellow-2;
+  }
+}
+
+// type-box
+.type-box{
+  @include size(100%, auto);
+  overflow: hidden;
+  padding: 10px 0;
+  margin-bottom: 10px;
+
+  h5 {
+    @include font-size(18px);
+    color: $blue;
+    padding: 0 10px;
+    margin-bottom: 10px;
+  }
+  ul {
+    @include size(100%, auto);
+    overflow: hidden;
+    margin-bottom: 10px;
+
+    li {
+      border-bottom: 1px solid $gray-2;
+      line-height: 24px;
+
+      &:last-child {
+        border-bottom: none;
+      }
+
+      a {
+        @include font-size(14px);
+        text-decoration: none;
+        color: $light-blue;
+        padding: 0 10px;
+      }
+    }
+  }
 }
 
 // footer
