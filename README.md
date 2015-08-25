@@ -18,9 +18,9 @@ Una vez representada agregar un 'listener' al boton 'ver disponibilidad' haga qu
 al usuario de cualquier forma posible, las fechas de 'availability' de los datos.
 
 - [x] Será requisito que el JSON dado sea cargado asincronicamente.
-- [ ] Se valorará generar un diagrama de clases para manilupar los datos.
+- [x] Se valorará generar un diagrama de clases para manilupar los datos.
 - [x] Se pueden usar librerías estilo jQuery / prototype.
-- [ ] Se valorará el uso de templates y patron MVC para la representación.
+- [x] Se valorará el uso de templates y patron MVC para la representación.
 - [x] No hace falta tomar en cuenta el paginado, ni tampoco que deban mostrarse en el mapa.
 
 ```json
